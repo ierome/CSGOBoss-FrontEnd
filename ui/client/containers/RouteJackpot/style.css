@@ -1,0 +1,44 @@
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  height: 45px;
+  background: rgba(23, 24, 27, 0.15);
+  font-size: 0.9rem;
+}
+
+.menu > a {
+  display: flex;
+  align-items: center;
+  color: #e8e8e8;
+  margin: 0 20px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu > a > img {
+  width: 35px;
+  margin-right: 5px;
+}
+
+.menu > a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.menuActive {
+  opacity: 1 !important;
+}
+
+.menu > a > span {
+  background: rgba(29, 30, 33, 0.58);
+  color: #e9c86c;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  padding: 5px 15px;
+  border-radius: 5px;
+}

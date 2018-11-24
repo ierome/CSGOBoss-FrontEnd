@@ -1,0 +1,26 @@
+.tableContainer {
+  flex: 1;
+  background: #fbfbfb;
+  border-radius: 6px;
+  padding: 6px 30px;
+  box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.37);
+  color: #414346;
+}
+
+.profit {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.1s linear;
+}
+
+.profit:hover {
+  opacity: 0.4;
+}
+
+.profitActive {
+  opacity: 1;
+}
+
+.profitActive:hover {
+  opacity: 1;
+}

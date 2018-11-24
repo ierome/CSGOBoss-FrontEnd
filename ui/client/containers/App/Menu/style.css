@@ -1,0 +1,107 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  min-height: 80px;
+}
+
+.containerLight {
+  composes: container;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+  opacity: 0.4;
+  transition: 0.25s ease;
+}
+
+.menuItem:hover {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.menuItemActive {
+  opacity: 1;
+}
+
+.menuItem > img {
+  display: block;
+  margin-right: 13px;
+  width: 30px;
+}
+
+.menuItem > div {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 18px;
+  color: #fff;
+}
+
+.containerLight .menuItem > div {
+  font-weight: 100 !important;
+}
+
+.menuItemSubtext {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #f4d58d;
+}
+
+.signInButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  width: 250px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 6px;
+  background: #f4d58d;
+  color: #1a1b1e;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+}
+
+.signInButton img {
+  width: 1.55rem;
+  margin-right: 10px;
+}
+
+.signInButton:hover {
+  background-color: #d0b77e;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1a1b1e;
+}
+
+.signInButton:focus {
+  outline: none;
+}
+
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.rightSide a {
+  opacity: 0.4;
+  margin-left: 15px;
+}
+
+.rightSide a:hover {
+  opacity: 0.8;
+}
+
+.rightSide img {
+  width: 27px;
+  transition: all 0.3s linear;
+}

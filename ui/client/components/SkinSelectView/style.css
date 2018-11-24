@@ -1,0 +1,107 @@
+
+.container {
+  position: absolute 0;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  mine-height: 100%;
+  overflow: hidden;
+}
+
+.skinsContainer {
+  flex: 1;
+  padding: 0px 50px 0px 50px;
+  overflow-y: auto;
+}
+
+.skin {
+  cursor: pointer;
+  border: 1px solid rgba(243, 246, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 50px !important;
+  padding: 15px 25px 15px 25px;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.skinSelected {
+  opacity: 1;
+  border-color: #e9c86c;
+}
+
+.skin::before {
+  border-left: 1px solid rgba(229, 229, 229, 0.1) !important;
+}
+
+.skinSelect {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #222429;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.skin:hover .skinSelect {
+  border-color: #8e8e8e;
+}
+
+.skinSelected .skinSelect {
+  background: #e9c86c;
+}
+
+.skin > img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  filter: drop-shadow(-3px 3px 3px rgba(0, 0, 0, 0.5));
+  transition: all 0.2s ease;
+}
+
+.skin:hover > img {
+  filter: drop-shadow(-3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+
+.skinWear {
+  flex: 1;
+}
+
+.skinName {
+  font-weight: bold;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.skinWear, .skinName {
+  color: #696a6b;
+}
+
+.skinSelected .skinWear, .skinSelected .skinName {
+  color: #e9c86c;
+}
+
+.skinTokens {
+  text-align: center;
+  font-weight: bold;
+  color: #e9c86c;
+}
+
+.skinTokens > img {
+  width: 18px;
+  padding-bottom: 2px;
+  margin-right: 4px;
+}

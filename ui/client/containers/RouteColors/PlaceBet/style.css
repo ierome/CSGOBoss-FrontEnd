@@ -1,0 +1,133 @@
+
+.container {
+  position: absolute;
+  left: 0;
+  bottom: calc(50% - 90px);
+  width: 300px;
+  background: rgba(28, 30, 33, 0.95);
+  border-radius: 9px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.controls {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.controls > button {
+  flex: 1;
+  background: #191a1e;
+  border: none;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.7rem;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.controls > button:hover {
+  background: #161719;
+}
+
+.controls > button:focus {
+  outline: none;
+}
+
+.subControls {
+  composes: controls;
+}
+
+.betContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.container img {
+  width: 45px;
+  margin-right: 15px;
+}
+
+.container input {
+  display: block;
+  box-sizing: border-box;
+  background: #191a1e;
+  border: none;
+  border-radius: 5px;
+  color: #d0d0d0;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 12px 0;
+  text-align: center;
+  flex: 1;
+  width: 100%;
+}
+
+.container input::-webkit-outer-spin-button,
+.container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.minBetNotice {
+  position: absolute;
+  bottom: -38px;
+  left: 20px;
+  right: 20px;
+  background: #d0d0d0;
+  color: #343434;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 4px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: minBetNoticeEnter 0.5s ease forwards;
+}
+
+@keyframes minBetNoticeEnter {
+  100% {
+    opacity: 0.6;
+    transform: translateY(0px);
+  }
+}
+
+.blurr {
+  opacity: 0.03;
+}
+
+.loginNotice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+  font-weight: 500;
+  border-radius: 9px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 25px;
+  color: #d0d0d0;
+}
+
+.loginNotice img {
+  width: 70px;
+  margin: 0;
+  margin-bottom: 10px;
+}

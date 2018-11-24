@@ -1,0 +1,105 @@
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  width: 0;
+  overflow: hidden;
+  animation: enter 1.2s cubic-bezier(0, 1.04, 0.59, 1) forwards;
+}
+
+@keyframes enter {
+  100% {
+    width: 99%;
+  }
+}
+
+.overlay {
+  position: absolute 0;
+  pointer-events: none;
+  z-index: 0;
+  /*opacity: 0.3;*/
+}
+
+.reverse {
+  animation-delay: 0.3s;
+}
+
+.avatar {
+  width: 25%;
+  display: block;
+  border-radius: 20px;
+  box-shadow: -5px 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+  opacity: 0;
+  transform: scale(0);
+  animation: imageEnter 0.9s ease forwards;
+}
+
+@keyframes imageEnter {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container h3 {
+  color: #fff;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2px;
+  /*-webkit-font-smoothing: antiliased;*/
+  z-index: 15;
+}
+
+.container h3 > img {
+  width: 35px;
+  padding-bottom: 3px;
+  margin-right: 3px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  max-width: 80%;
+  flex-wrap: wrap;
+  height: 35%;
+  overflow: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #6d6d6d;
+  letter-spacing: 0.06rem;
+  min-width: 200px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.item > img {
+  height: 60px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.35));
+  margin-right: 5px;
+}
+
+.itemPrice {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #ffffff;
+  font-weight: 900;
+}

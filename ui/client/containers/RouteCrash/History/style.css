@@ -1,0 +1,38 @@
+
+.container {
+  display: flex;
+  min-height: 45px;
+  height: 45px;
+  line-height: 45px;
+  overflow: hidden;
+}
+
+.header {
+  padding-left: 10px;
+  font-weight: bold;
+  width: 140px;
+  color: #828285;
+}
+
+.crashes {
+  display: flex;
+  padding: 0 15px;
+  overflow: hidden;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.crashes > div {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.highCrash {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.lowCrash {
+  font-weight: bold;
+  color: #ef5350;
+}

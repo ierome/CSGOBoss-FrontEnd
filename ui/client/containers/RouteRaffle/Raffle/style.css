@@ -1,0 +1,175 @@
+
+.raffle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #1a1c1f;
+  margin: 0 25px;
+  padding: 30px;
+  box-sizing: border-box;
+  width: 300px;
+  min-width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+
+  opacity: 0;
+  animation: raffleEnter 0.6s ease forwards;
+}
+
+@keyframes raffleEnter {
+  100% {
+    opacity: 1;
+  }
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  font-weight: 900;
+  color: #ececec;
+  text-align: center;
+  min-height: 125px;
+  height: 125px;
+}
+
+.timer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #6037aa;
+  color: #f7faff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px 15px;
+  border-radius: 0 0 0 3px;
+  box-shadow: -2px 1px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Verdana';
+}
+
+.divider {
+  min-height: 1px;
+  height: 1px;
+  margin: 0 0 20px 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(92, 92, 97, 0.64) 50%, rgba(0, 0, 0, 0) );
+}
+
+.ticketsCounter {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #56585c;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.02rem;
+  font-family: 'Verdana';
+  opacity: 0.85;
+}
+
+.chance {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #67686d;
+}
+
+.prize {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: #63646a;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.applySection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.applySectionOverlay {
+  position: absolute;
+  top: -26px;
+  right: -30px;
+  bottom: -30px;
+  left: -30px;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 28, 31, 0.5);
+
+  text-align: center;
+  padding: 0 20px;
+
+  color: white;
+  font-weight: 900;
+  font-family: 'PT sans', sans-serif;
+  font-size: 1.7rem;
+
+  opacity: 0;
+  animation: applySectionOverlayEnter 0.7s ease forwards;
+}
+
+@keyframes applySectionOverlayEnter {
+  100% {
+    opacity: 1;
+  }
+}
+
+.applySectionOverlay button {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.applySectionOverlay img {
+  user-select: none;
+  width: 5rem;
+}
+
+@keyframes applySectionOverlayEnterImage {
+  0% {
+    opacity: 0.10;
+  }
+
+  50% {
+    opacity: 0.15;
+  }
+
+  100% {
+    opacity: 0.10;
+  }
+}
+
+.blur {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.9s ease;
+}
+
+.blurEnabled {
+  opacity: 0.8;
+  filter: blur(6px);
+}
+
+.myTickets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.myTickets img {
+  width: 35px;
+  margin-right: 6px;
+}

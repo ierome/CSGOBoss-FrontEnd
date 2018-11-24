@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="58px" viewBox="0 0 100 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>raffleticket</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="raffleticket" fill-rule="nonzero">
+            <path d="M100,47.6190476 L100,9.52380952 C94.7404762,9.52380952 90.4761905,5.25952381 90.4761905,0 L9.52380952,0 C9.52380952,5.25952381 5.25952381,9.52380952 0,9.52380952 L0,47.6190476 C5.25952381,47.6190476 9.52380952,51.8833333 9.52380952,57.1428571 L90.4761905,57.1428571 C90.4761905,51.8833333 94.7404762,47.6190476 100,47.6190476 Z" id="Shape" fill="#F4D58D"></path>
+            <rect id="Rectangle-path" fill="#FFEDC3" x="21.4285714" y="14.2857143" width="54.7619048" height="28.5714286"></rect>
+            <path d="M85.7142857,57.1428571 L80.952381,57.1428571 C80.952381,55.8285714 82.0190476,54.7619048 83.3333333,54.7619048 C84.647619,54.7619048 85.7142857,55.8285714 85.7142857,57.1428571 Z" id="Shape" fill="#C9A143"></path>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="50" r="2.38095238"></circle>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="42.8571429" r="2.38095238"></circle>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="35.7142857" r="2.38095238"></circle>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="28.5714286" r="2.38095238"></circle>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="21.4285714" r="2.38095238"></circle>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="14.2857143" r="2.38095238"></circle>
+            <circle id="Oval" fill="#C9A143" cx="83.3333333" cy="7.14285714" r="2.38095238"></circle>
+            <path d="M85.7142857,0 C85.7142857,1.31428571 84.647619,2.38095238 83.3333333,2.38095238 C82.0190476,2.38095238 80.952381,1.31428571 80.952381,0 L85.7142857,0 Z" id="Shape" fill="#C9A143"></path>
+        </g>
+    </g>
+</svg>

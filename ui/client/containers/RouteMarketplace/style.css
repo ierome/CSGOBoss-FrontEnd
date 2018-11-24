@@ -1,0 +1,35 @@
+
+.step {
+  text-align: center;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.stepActive {
+  opacity: 1;
+}
+
+.step h5 {
+  font-weight: bold;
+  color: #666;
+}
+
+.step > div {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 3px solid #666;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.step > div > i {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.agentName {
+  color: #673ab7;
+}

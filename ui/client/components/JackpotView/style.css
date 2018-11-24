@@ -1,0 +1,322 @@
+
+.container {
+  position: absolute 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.modeNameContainer {
+  color: #67686d;
+  text-transform: uppercase;
+}
+
+.modeName {
+  font-weight: 100;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+.modeDescription {
+  font-size: 0.9rem;
+}
+
+.mode {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 10px 19px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffffff;
+  opacity: 0.65;
+  transition: all 0.2s ease;
+}
+
+.modeActive {
+  opacity: 1;
+}
+
+.modeActive, .mode:hover {
+  color: #191b1f;
+  background: #f4d58d;
+  text-decoration: none;
+}
+
+.innerContainer {
+  display: flex;
+  flex: 1;
+  margin-top: 15px;
+  overflow-y: scroll;
+}
+
+.leftSide {
+  min-width: 185px;
+  width: 180px;
+}
+
+.historyContainer {
+  display: flex;
+  align-items: center;
+  background: rgba(28, 30, 33, 0.6);
+  height: 40px;
+  min-height: 40px;
+  font-size: 0.8rem;
+  align-items: center;
+  padding: 0 15px;
+  font-weight: 900;
+}
+
+.historyContainerHeader {
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+}
+
+.historyAmount {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #f4d58d;
+}
+
+.historyChance {
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: #67686d;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.widget {
+}
+
+.widgetName {
+  font-weight: 900;
+  color: #67686d;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.9rem;
+  margin-top: 1px;
+}
+
+.potSize {
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  font-size: 2.6rem;
+  color: #f4d58d;
+  font-family: Gotham Rounded SSm A,Gotham Rounded SSm B;
+}
+
+.potSize > img {
+  width: 35px;
+  margin-right: 7px;
+}
+
+.progressContainer {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+}
+
+.blocks {
+  flex: 1;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.loading {
+  margin: 20px auto;
+  background: #efc75e;
+  color: #2a2d31;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.topSection {
+  height: 60px;
+  overflow: hidden;
+  transition: height .2s ease;
+}
+
+.topSectionHidden {
+  height: 0px;
+}
+
+.chance {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  background: #efc75e;
+  padding: 5px;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 1px #000;
+}
+
+.betControls {
+  display: flex;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  justify-content: flex-end;
+}
+
+.betControls input {
+  font-family: Gotham Rounded SSm A,Gotham Rounded SSm B;
+  flex: 1;
+  border: none;
+  background: rgba(25, 27, 31, 0.4);
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1.5rem;
+  min-width: 100px;
+  max-width: 200px;
+  text-align: center;
+}
+
+/*.betControls input:disabled {
+  opacity: 0.5;
+}*/
+
+.betControls button {
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.depositButton {
+  width: 100%;
+  max-width: 200px;
+  /*background: #e9c86c;*/
+  color: #2a2d34;
+  margin-left: 20px;
+  /*font-weight: bold;*/
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.snipeModifier, .snipeModifier:focus {
+  position: relative;
+  font-size: 1.2rem !important;
+  background: #7a38ef url('./Block/assets/gplay.png');
+  color: #fff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  text-transform: uppercase;
+}
+
+.snipeModifier img {
+  width: 35px;
+  margin-right: 5px;
+}
+
+.snipeModifier:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 0;
+  animation: shine 1.8s ease;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+.snipeModifier:hover {
+  color: #fff;
+  background-color: #a7261c;
+}
+
+@media only screen and (max-width: 960px) {
+  .betControls {
+    flex-direction: column;
+  }
+
+  .betControls > div {
+    padding: 10px 0;
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .betControls > div > button {
+    flex: 1;
+  }
+}
+
+.hideDeposit {
+  width: 0;
+  padding: 0;
+  margin-left: 3px;
+}
+
+.hide {
+  padding: 0;
+  height: 0;
+  max-height: 0;
+  margin: 0;
+}
+
+
+.playerChances {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playerChance {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  background-size: contain;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.playerChance > div {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  padding: 4px 0;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}

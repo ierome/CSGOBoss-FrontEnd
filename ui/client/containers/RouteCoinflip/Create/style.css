@@ -1,0 +1,168 @@
+
+.coinflipLogo {
+  animation: hover 10s ease infinite;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.teams {
+  display: flex;
+  margin-top: 10px;
+}
+
+.team {
+  flex: 1;
+  opacity: 0.3;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.team:hover {
+  opacity: 0.8;
+}
+
+.teamActive {
+  opacity: 1;
+}
+
+.team:hover {
+  opacity: 1;
+}
+
+.team span {
+  display: block;
+  margin-top: 15px;
+}
+
+.team h4 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.team img {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.teamT {
+  composes: team;
+}
+
+.teamT h4 {
+  color: #9d8f5e;
+}
+
+.buttonT {
+  color: #fff;
+  background: #9d8f5e;
+}
+
+.teamCT {
+  composes: team;
+}
+
+.buttonCT {
+  color: #fff;
+  background: #8b99a4;
+}
+
+.teamCT h4 {
+  color: #8b99a4;
+}
+
+.betInput {
+  display: block;
+  margin: 15px auto;
+  font-size: 24px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-family: inherit;
+  color: #666;
+  border-radius: 12px;
+  background: #8b99a4;
+}
+
+.betButton:disabled {
+  opacity: 0.5;
+}
+
+.skins {
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  max-height: 250px;
+  overflow: auto;
+  background: #fdfdfd;
+  margin-top: 25px;
+}
+
+.skins h1 {
+  font-weight: 100;
+  color: #666666;
+}
+
+.skin {
+  background: #fff;
+  min-width: 150px;
+  width: 150px;
+  height: 160px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.skin:hover {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.skinActive {
+  border-color: #673ab7 !important;
+  color: #673ab7;
+}
+
+.skin img {
+  width: 65px;
+  margin: 15px 0;
+}
+
+.skinName {
+  font-size: 0.75rem;
+  text-align: center;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
+.wager {
+  font-size: 3rem;
+  font-weight: 300;
+}

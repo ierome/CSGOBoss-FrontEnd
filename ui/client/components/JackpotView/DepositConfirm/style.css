@@ -1,0 +1,80 @@
+
+.normal {
+  position: relative;
+  background: #673ab7;
+  padding: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 25px 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  max-height: 0px;
+  transition: all .2s ease;
+  animation: enter 1.5s ease forwards;
+  flex: 1;
+}
+
+@keyframes enter {
+  100% {
+    max-height: 500px;
+  }
+}
+
+.normal:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.normal:after {
+  animation: shine 1.5s ease infinite;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+.normal h3 {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.normal p {
+  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.button {
+  position: relative;
+  background: #fff;
+  margin-right: 5px;
+  z-index: 1;
+  color: #493c63;
+  font-weight: bold;
+}
+
+.loading {
+  opacity: 0.4 !important;
+}

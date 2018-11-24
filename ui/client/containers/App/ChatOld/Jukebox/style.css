@@ -1,0 +1,125 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://www.transparenttextures.com/patterns/always-grey.png);
+  background-position: 0px 0px;
+  background-color: #4a3275;
+  min-height: 0px;
+  height: 0px;
+  min-width: 300px;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1;
+  animation: animatedBackground 10s linear infinite, onEnter 0.25s ease forwards;
+}
+
+@keyframes onEnter {
+  to {
+    opacity: 1;
+    height: 60px;
+    min-height: 60px;
+  }
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+.controlContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  min-width: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.currentName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  max-width: 180px;
+
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.currentArtist {
+  font-size: 0.7rem;
+  color: #c7c7c7;
+  font-weight: 900;
+}
+
+.changeSong {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  cursor: pointer;
+  outline: none;
+  background: #1b1c20;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: none;
+  border-right: none;
+  color: #d6d4d4;
+  padding: 5px 15px;
+  font-size: 0.6rem;
+  font-weight: 900;
+  border-radius: 5px 0 0 0;
+  letter-spacing: 0.05rem;
+}
+
+.hide {
+  composes: changeSong;
+  right: initial;
+  left: 0;
+  border-radius: 0 5px 0 0;
+}
+
+
+.toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.35);
+  width: 22px;
+  text-align: center;
+  border-top: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.hideContainer {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 30px;
+  min-width: 0px;
+  background: none;
+}
+
+.playing {
+  animation: playing 4s ease infinite;
+}
+
+@keyframes playing {
+  0% {
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  50% {
+    background: #6138aa;
+  }
+
+  100% {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}

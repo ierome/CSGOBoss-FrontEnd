@@ -1,0 +1,81 @@
+
+@import "~uikit/src/less/components/navbar.less";
+
+@navbar-nav-item-height: 80px;
+@navbar-dropdown-background: #2b2b2b;
+@navbar-dropdown-color: #fff;
+
+.hook-navbar-container()  {
+  &.bottom {
+    background: #2b2b2b;
+
+    .uk-navbar-nav > li > a,
+    .uk-navbar-item,
+    .uk-navbar-toggle {
+      height: 63px;
+    }
+  }
+
+  &.main {
+    background: transparent;
+  }
+}
+
+.hook-navbar-nav-item() {
+  transition: all 0.3s ease;
+
+  .top & {
+    font-weight: bold;
+    color: #fff;
+
+   > i {
+     margin-right: 3px;
+   }
+  }
+
+  .main & {
+
+    &.game {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+    }
+
+    font-weight: bold;
+    color: #fff;
+
+    img {
+      margin-right: 3px;
+      width: 20px;
+    }
+
+    .amount {
+      color: #f4d58d;
+    }
+    // height: 40px;
+  }
+}
+
+.hook-navbar-item() {
+  .top & {
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.hook-navbar-nav-item-hover() {
+  .top & {
+    color: #e6e6e6;
+  }
+}
+
+.hook-navbar-dropdown() {
+  a {
+    color: #fff;
+  }
+}
+
+.hook-navbar-nav-item-active() {
+  filter: drop-shadow(0px 0px 5px rgba(244, 213, 141, 0.2s));
+}

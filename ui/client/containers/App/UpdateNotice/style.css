@@ -1,0 +1,63 @@
+
+.container {
+  min-height: 31px;
+  position: relative;
+  display: flex;
+  background: #a98f6e;
+  color: #f3f2f1;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  align-items: center;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  animation: enter 1.5s ease forwards;
+}
+
+.container:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 1;
+}
+
+.container:after {
+  animation: shine 1.5s ease infinite;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+
+.container :global(.uk-spinner) {
+  width: 25px;
+  height: 25px;
+}
+
+@keyframes enter {
+  100% {
+    opacity: 1;
+    padding: 5px 10px;
+    max-height: 100px;
+  }
+}

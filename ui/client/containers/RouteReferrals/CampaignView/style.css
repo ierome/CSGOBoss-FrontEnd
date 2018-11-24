@@ -1,0 +1,259 @@
+
+.widgets {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 25px;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(29, 30, 33, 0.7);
+  border-radius: 10px;
+  min-width: 200px;
+  margin-bottom: 15px;
+  min-width: 230px;
+}
+
+.widgetValue {
+  display: flex;
+  align-items: center;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+  color: #c3c3c3;
+}
+
+.widgetValue .subName {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  color: #67686d;
+  margin-left: 10px;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+}
+
+.widgetValues .widgetValue {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #f4d58d;
+}
+
+.widgetName {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #67686d;
+  margin-bottom: 3px;
+}
+
+.widgetSplitter {
+  margin: 15px 0;
+  min-height: 1px;
+  height: 1px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(103, 104, 98, 0.26), rgba(0, 0, 0, 0));
+}
+
+.minimumWithdrawInfo {
+  font-size: 0.8rem;
+  color: #67686d;
+  font-weight: 900;
+  max-width: 250px;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.advertise {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.advertise .advertiseHeader {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-right: 25px;
+  color: #67686d;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+}
+
+.advertise input {
+  background: rgba(29, 30, 33, 0.35);
+  border: none;
+  padding: 10px 0px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #dcdcdc;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+  letter-spacing: 0.06rem;
+  box-sizing: border-box;
+}
+
+.advertise .advertiseInfo {
+  font-size: 0.8rem;
+  color: #4f5056;
+  font-weight: 900;
+  margin-top: 5px;
+}
+
+.historyContainer {
+  flex: 1;
+  background: #fff;
+  box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.historyContainer .header {
+  display: flex;
+  align-items: center;
+  color: rgba(33, 35, 41, 0.5);
+  font-size: 01rem;
+  /* font-weight: 100; */
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  margin-bottom: 15px;
+}
+
+.historyContainer .header > img {
+  width: 0.8rem;
+  margin-right: 5px;
+}
+
+.historyContainer table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #656565;
+}
+
+.historyContainer table th {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.historyContainer table td {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.historyContainer table tr:nth-child(even) td {
+  opacity: 0.6;
+  background: #f7f7f7;
+}
+
+.historyContainer table .time {
+  color: #a7a7a7;
+}
+
+.historyContainer table tr:nth-child(odd) td.time {
+  color: #656565 !important;
+}
+
+.historyContainer table tr:nth-child(odd) td img {
+  opacity: 0.7;
+}
+
+.historyContainer .profit {
+  /*color: #f4d58d !important;*/
+  font-weight: 900;
+}
+
+.historyContainer .profit img {
+  margin-right: 3px;
+  width: 17px;
+}
+
+.withdrawButton {
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.balanceWidget {
+  composes: widget;
+  background: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.balanceWidget .widgetValue {
+  line-height: normal;
+  font-size: 2.2rem;
+  color: #f4d58d;
+  font-weight: 100;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+}
+
+.balanceWidget .widgetValue > img {
+  width: 29px;
+  margin-right: 5px;
+}
+
+.balanceWidget .widgetName {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.referralCodeWidget{
+  composes: widget;
+}
+
+/*.referralCodeWidget .widgetName {
+  margin: 0;
+}*/
+
+/*.referralCodeWidget .widgetValue {
+  font-size: 1rem;
+  color: #fff;
+}*/
+
+.historyContainerEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute 0;
+  z-index: 5;
+  border-radius: 5px;
+  color: #68696e;
+  opacity: 0.7;
+  background: #fff;
+}
+
+.historyContainerEmptyHeader {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #1d1e21;
+  margin-bottom: 10px;
+}
+
+.historyContainerEmptyHeader img {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.historyContainerEmptyMessage {
+  max-width: 75%;
+  text-align: center;
+  font-size: 0.9rem;
+}

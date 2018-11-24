@@ -1,0 +1,100 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.header img {
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerContent {
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.headerSubText {
+  font-size: 1.2rem;
+  color: #67686d;
+}
+
+.headerCompact {
+  flex-direction: row;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.headerCompact img {
+  width: 64px;
+  margin-right: 25px;
+  margin-bottom: 0;
+}
+
+.headerCompact .headerContainer {
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.headerCompact .headerContent {
+  color: #67686d;
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 1.2rem;
+}
+
+.headerCompact .headerSubText {
+  font-size: 0.9rem;
+}
+
+.headerCompactAnimated .header img, .headerCompactAnimated .headerContent, .headerCompactAnimated .headerSubText {
+  transition: all 0.6s ease;
+}
+
+.guestNotice {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 900;
+  max-width: 400px;
+  color: #67686d;
+}
+
+.guestNotice > div {
+  color: #f4d58d;
+}
+
+.guestNotice > div > i {
+  color: #67686d;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.campaignHeader {
+  composes: header headerCompact;
+  opacity: 0;
+  animation: campaignHeaderEnter 0.6s ease forwards;
+}
+
+@keyframes  campaignHeaderEnter {
+  100% {
+    opacity: 1;
+  }
+}
+
+.campaignHeader .headerContainer {
+  margin: 0 !important;
+  align-items: flex-start;
+}

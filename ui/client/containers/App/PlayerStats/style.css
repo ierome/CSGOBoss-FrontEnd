@@ -1,0 +1,121 @@
+
+.header {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  min-height: 50px;
+  align-items: center;
+}
+
+.playerName {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #5a5a5a;
+}
+
+.playerName img {
+  height: 32px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.statValue {
+  color: #673ab7;
+  font-family: Verdana;
+  font-size: 1.1rem;
+}
+
+.statName {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.chartContainer {
+  position: relative;
+  flex: 1;
+}
+
+.chartWip {
+  position: absolute 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.tipPanel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  width: 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0.8rem;
+  transition: all .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.showTipPanel {
+  width: 100%;
+}
+
+.tipPanel input {
+  display: block;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  color: #616161;
+  font-weight: 100;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 3px;
+  padding: 6px 0;
+  width: 100%;
+
+  border-left: 6px solid #e5e5e5;
+  box-sizing: content-box;
+  margin-bottom: 3px;
+}
+
+.blurr {
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+.adminControls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.adminControls > button {
+  margin: 5px;
+}

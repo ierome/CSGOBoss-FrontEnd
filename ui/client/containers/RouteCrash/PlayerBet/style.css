@@ -1,0 +1,147 @@
+
+.container {
+  position: relative;
+  padding: 5px;
+  font-weight: bold;
+  color: #fff;
+  border-left: 3px solid rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  animation: enter 0.8s ease-in-out forwards;
+  height: 50px;
+  user-select: none;
+}
+
+@keyframes enter {
+  20% {
+    opacity: 0.7;
+  }
+
+  40% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  60% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.myBet {
+  border-color: #fcd66f;
+}
+
+.name {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+
+.name > div {
+  text-shadow: none;
+  font-size: 13px;
+}
+
+.name > img {
+  width: 39px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 0px #000;
+  margin-right: 10px;
+  float: left;
+}
+
+.name > div > img {
+  width: 10px;
+  padding-bottom: 3px;
+}
+
+.betAmount {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0 10px;
+  line-height: 50px;
+  color: #fcd66f;
+  font-weight: bold;
+  font-size: 23px;
+  min-width: 45%;
+  text-align: center;
+}
+
+.betAmount img {
+  width: 23px;
+  padding-bottom: 3px;
+  margin-right: 1px;
+}
+
+.lost {
+  color: #ff8381;
+  opacity: 1;
+  animation: lost 1s ease forwards;
+}
+
+.lost .betAmount {
+  color: #ff8381;
+}
+
+@keyframes lost {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.won {
+  position: relative;
+  color: #fbd56e;
+}
+
+.won:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 0;
+}
+
+.won:after {
+  animation: shine 1.5s ease;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}

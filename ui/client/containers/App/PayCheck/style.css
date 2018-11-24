@@ -1,0 +1,94 @@
+
+.container {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  padding: 10px;
+  background: #673ab7;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000;
+  z-index: 10;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.container:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 0;
+  animation: shine 2.5s ease infinite;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+
+.container button {
+  margin-left: 25px;
+}
+
+.payCheck {
+  color: #fff;
+  font-weight: bold;
+  background: #673ab7;
+  border: 10px dotted rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.payCheck h4 {
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.payCheck h6 {
+  margin: 0;
+}
+
+.date {
+  text-decoration: underline;
+}
+
+.topRightStamp {
+  font-family: 'courier new';
+}
+
+.payToOrderOf {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.payToOrderOf h4 {
+  font-weight: bold;
+  padding-right: 15px;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.payToOrderOfName {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  flex: 1;
+}

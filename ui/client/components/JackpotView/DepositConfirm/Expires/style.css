@@ -1,0 +1,9 @@
+
+.normal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.36);
+  padding: 5px;
+  border-radius: 0 10px;
+}

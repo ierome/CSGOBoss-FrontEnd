@@ -1,0 +1,143 @@
+@value width: 250px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: width;
+  min-width: width;
+  background-color: #2A2D34;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+  transition: all 0.5s cubic-bezier(0, 0.57, 0.51, 1.01);
+}
+
+.hidden {
+  width: 46px;
+  min-width: 46px;
+}
+
+.header {
+  position: relative;
+  padding: 25px 0 35px 0;
+  width: width;
+  min-width: width;
+}
+
+.header img {
+  display: block;
+  width: 75px;
+  margin: 0 auto;
+  filter: drop-shadow(-4px 0px 2px rgba(0, 0, 0, 0.2));
+  transform: scale(0);
+  animation: logoEnter .3s ease-in-out forwards;
+  transition: all 0.7s cubic-bezier(0, 0.57, 0.51, 1.01);
+}
+
+.hidden .header img {
+  width: 0;
+}
+
+@keyframes logoEnter {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.chatToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 8px;
+  background: #222429;
+  border-radius: 0 0 0px 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.hidden .chatToggle {
+  right: initial;
+  left: 0;
+  width: 46px;
+  padding: 5px 0;
+  border-radius: 0;
+}
+
+.chatToggle:hover {
+  background: #1f2125;
+}
+
+.menu {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: width;
+  min-width: width;
+}
+
+.menu :global(.uk-nav) {
+  background-color: #222429;
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.35);
+  margin-bottom: 20px;
+}
+
+/*.menu :global(.uk-nav) > li {
+  border-bottom: 2px solid rgba(32, 34, 40, 0.55);
+}*/
+
+.menu :global(.uk-nav) > li {
+  position: relative;
+}
+
+.menu :global(.uk-nav) > li:before {
+  content: ' ';
+  position: absolute;
+  width: 4px;
+  border-radius: 2px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleY(0);
+  background-color: #fbd56e;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menu :global(.uk-nav) > :global(li.uk-active):before {
+  transform: scaleY(1);
+}
+
+.menu :global(.uk-nav) > li > a:hover {
+  background: #1f2125;
+}
+
+.menu :global(.uk-nav) > li > a > small {
+  float: right;
+  padding-top: 3px;
+  padding-right: 4px;
+  color: #fbd56e;
+}
+
+.menu :global(.uk-nav) > li > a {
+  padding: 8px 0 8px 10px;
+  font-weight: bold;
+  color: #d0d0d0;
+  transition: all 0.3s ease;
+}
+
+.menu :global(.uk-nav) > li > a > img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.menu :global(.uk-nav) > li > a > i {
+  font-size: 20px;
+  color: #a98f6e;
+  width: 25px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}

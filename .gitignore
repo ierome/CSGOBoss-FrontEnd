@@ -1,0 +1,8 @@
+node_modules/
+dist/
+development.json
+production.json
+.DS_Store
+*.log
+*.zip
+static/

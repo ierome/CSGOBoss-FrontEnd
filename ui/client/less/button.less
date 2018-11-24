@@ -1,0 +1,45 @@
+
+
+@button-primary-background: #673ab7;
+@button-primary-color: #fff;
+@button-primary-hover-background: darken(@button-primary-background, 5%);
+@button-primary-hover-color: @button-primary-color;
+@button-primary-active-background: darken(@button-primary-background, 10%);
+@button-primary-active-color: @button-primary-color;
+
+@button-default-background: #d0d0d0;
+@button-default-color: #1c1d21;
+@button-default-hover-background: darken(@button-default-background, 5%);
+@button-default-hover-color: @button-default-color;
+@button-default-active-background: darken(@button-default-background, 10%);
+@button-default-active-color: @button-default-color;
+
+@button-secondary-background: #f4d58d;
+@button-secondary-color: #2a2d34;
+@button-secondary-hover-background: darken(@button-secondary-background, 5%);
+@button-secondary-hover-color: @button-secondary-color;
+@button-secondary-active-background: darken(@button-secondary-background, 10%);
+@button-secondary-active-color: @button-secondary-color;
+
+.hook-button() {
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.hook-button-active() {
+  outline: none;
+}
+
+.hook-button-disabled() {
+  opacity: 0.5;
+
+  &.uk-button-default {
+    color: @button-default-color;
+    background-color: @button-default-background;
+  }
+
+  &.uk-button-secondary {
+    color: @button-secondary-color;
+    background-color: @button-secondary-background;
+  }
+}

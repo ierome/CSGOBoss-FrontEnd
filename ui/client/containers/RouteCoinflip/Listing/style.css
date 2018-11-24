@@ -1,0 +1,219 @@
+
+.container {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  /*border-left: 6px solid #fff;*/
+  background: #2a2d34;
+  height: 60px;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin-bottom: 10px;
+  transition: all 0.4s ease;
+}
+
+.container > div {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
+.overlay {
+  position: absolute 0;
+  background: url(http://www.csgoboss.com/d1b4cc17fbb3149178c9a1a6a47e33fb.png);
+  z-index: 0;
+  opacity: 0.05 !important;
+  pointer-events: none;
+}
+
+.players {
+  display: flex;
+  align-items: center;
+  max-width: 163px;
+  min-width: 163px;
+  min-height: 50px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  min-height: 40px;
+  background: #212328;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.avatar {
+  position: absolute 0;
+  z-index: 1;
+  opacity: 0.8;
+  border-radius: 5px;
+  width: 65px;
+}
+
+.avatarSide {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  width: 27px;
+  right: -15px;
+}
+
+.leftAvatarSide {
+  composes: avatarSide;
+  right: inherit;
+  left: -15px;
+}
+
+.stake {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 150px;
+  overflow: hidden;
+    margin-right: 35px;
+  font-size: 1.5rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+  color: #cfcfcf;
+}
+
+.stake img {
+  width: 25px;
+  margin-right: 10px !important;
+}
+
+.stakeRange {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 2px;
+  color: #f4d58d;
+  letter-spacing: 0.05rem;
+}
+
+.newListing:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.3);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 0;
+  animation: shine 2s ease;
+  pointer-events: none;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 15px 0 25px;
+  max-width: 200px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.items > img {
+  height: 35px;
+  min-height: 35px;
+  min-width: 45.25px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.6));
+  margin-right: 5px;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.3);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+.faded {
+  opacity: 0.18;
+}
+
+.joinButton {
+  border-radius: 100px;
+  font-weight: 900;
+  color: #ffffff;
+  background: #673bb7;
+  box-shadow: 0px 0px 8px rgba(0, 0, 17, 0.35);
+  font-family: 'PT Sans', sans-er;
+  font-size: 1.2rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 270px;
+}
+
+.deleting {
+  overflow: hidden;
+  animation: delete 0.6s cubic-bezier(0.25, 0.64, 0.45, 0.85) forwards;
+  animation-delay: 2s;
+  transform: scale(0.97);
+}
+
+.deleting > div {
+  opacity: 0.2;
+}
+
+@keyframes delete {
+  100% {
+    /*opacity: 0;*/
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.deleteNotice {
+  position: absolute 0;
+  z-index: 20;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 9px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: none !important;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.deleting .players {
+  z-index: 25;
+  position: relative;
+  opacity: 1 !important;
+}
+.deleteNotice > span {
+  margin-bottom: 10px;
+}

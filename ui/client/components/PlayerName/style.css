@@ -1,0 +1,16 @@
+
+.playerName {
+  cursor: pointer;
+}
+
+.admin {
+  color: #8949fb;
+}
+
+.mod {
+  color: #3f51b5;
+}
+
+.youtuber {
+  color: #e53935;
+}

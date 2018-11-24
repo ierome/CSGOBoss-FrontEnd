@@ -1,0 +1,20 @@
+
+.container {
+  composes: container from 'containers/App/style.css';
+}
+
+.header {
+  composes: header from 'containers/App/style.css';
+}
+
+.logo {
+  composes: logo from 'containers/App/style.css';
+}
+
+.content {
+  composes: content from 'containers/App/style.css';
+}
+
+.viewport {
+  composes: viewport from 'containers/App/style.css';
+}

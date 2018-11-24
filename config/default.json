@@ -1,0 +1,102 @@
+{
+  "httpPort": 7000,
+  "url": "http://127.0.0.1:6999",
+  "authUrl": "http://127.0.0.1:6999",
+  "secret": "10TENTOESDOWN",
+  "morgan": true,
+
+  "raffle": {
+    "ratio": 0.1
+  },
+
+  "games": {
+    "coinflip": {
+      "minimumWager": 1,
+      "maximumItems": 12,
+      "maxDifference": 0.1,
+      "fee": 0.05
+    },
+
+    "colors": {
+      "roundLength": 20000,
+      "segments": [
+        "x50", "x5", "x2", "x3", "x2", "x3",
+        "x2", "x3", "x2", "x5", "x2", "x5",
+        "x2", "x3", "x2", "x3", "x2", "x3",
+        "x2", "x5", "x2", "x5", "x2", "x3",
+        "x2", "x3", "x2", "x3", "x2", "x3",
+        "x2", "x3", "x2", "x5", "x2", "x5",
+        "x2", "x3", "x2", "x3", "x2", "x3",
+        "x2", "x5", "x2", "x5", "x2", "x3",
+        "x2", "x3", "x2", "x3", "x2", "x5"
+      ],
+
+      "teams": {
+        "x2": {
+          "name": "X2",
+          "buttonColor": "#333",
+          "id": "x2",
+          "mult": 2,
+          "color": "#d0d0d0"
+        },
+
+        "x3": {
+          "name": "X3",
+          "buttonColor": "#fff",
+          "id": "x3",
+          "mult": 3,
+          "color": "#f44336"
+        },
+
+        "x5": {
+          "name": "X5",
+          "buttonColor": "#fff",
+          "id": "x5",
+          "mult": 5,
+          "color": "#673ab7"
+        },
+
+        "x50": {
+          "name": "X50",
+          "buttonColor": "#333",
+          "id": "x50",
+          "mult": 50,
+          "color": "#fcd66f"
+        }
+      }
+    }
+  },
+
+  "prices": {
+    "markup": 1.08
+  },
+
+  "steam": {
+    "apiKey": ""
+  },
+
+  "database": {
+    "db": "boss",
+    "silent": true,
+    "servers": [{
+      "host": "127.0.0.1",
+      "port": 28015
+    }]
+  },
+
+  "recaptcha": {
+    "siteKey": "",
+    "secretKey": ""
+  },
+
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+
+  "sknexchange": {
+    "rpcUrl": "http://127.0.0.1:5080/rpc",
+    "notifyUrl": "http://127.0.0.1:7000/rpc",
+    "whitelist": ["127.0.0.1", "::ffff:127.0.0.1"]
+  }
+}

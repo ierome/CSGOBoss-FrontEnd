@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  color: #f4d58d;
+}
+
+.headerContent > div {
+  font-size: 0.85rem;
+  color: #c5c5c5;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.headerSubtext {
+  color: #76787b;
+  font-weight: 100;
+  font-family: 'PT Sans';
+}
+
+.header img {
+  width: 4rem;
+  margin-bottom: 15px;
+}
+
+.rewards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border: 1px solid rgba(197, 197, 197, 0.31);
+  border-radius: 20px 4px 20px 4px;
+  padding: 15px 25px;
+  background: linear-gradient(to right, rgba(27, 28, 32, 0.15), rgba(244, 213, 141, 0.15));
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.28);
+  min-width: 250px;
+  width: 250px;
+  transition: opacity 0.3s linear;
+  margin: 10px 25px;
+  align-self: flex-start;
+}
+
+.rewardName {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 100;
+  color: #fff;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.rewardDescription {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.3;
+  font-family: 'PT Sans', sans-serif;
+  letter-spacing: 0.06rem;
+}
+
+.rewardName > img {
+  width: 4rem;
+  margin-bottom: 10px;
+}
+
+.rewardContent {
+  margin-top: 20px;
+}
+
+.rewardContent :global(#g-recaptcha) {
+  transform: scale(0.827);
+  transform-origin: 0 0;
+}
+
+.rewardContent input {
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: none;
+  background: rgba(26, 27, 30, 0.5);
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #f4d58d;
+  letter-spacing: 0.08rem;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+}
+
+.rewardLoader {
+  position: absolute 0;
+  border-radius: 20px 4px 20px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, rgba(28, 29, 33, 0.65), rgba(36, 37, 41, 0.65));
+  color: #ffffff;
+  z-index: 5;
+}
+
+.rewardRedeemed {
+  opacity: 0.4;
+}

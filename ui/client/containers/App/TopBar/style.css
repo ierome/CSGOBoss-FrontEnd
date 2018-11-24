@@ -1,0 +1,77 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  background: #212329;
+  border-radius: 0 0 0 6px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  font-size: .65rem;
+  color: #656565;
+}
+
+.menu > a, .social > a {
+  font-size: .75rem;
+  color: #656565;
+  margin: 0 0.8rem;
+  box-sizing: border-box;
+  height: 40px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
+.menu > a:hover, .social > a:hover {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.rightMenu {
+  composes: menu;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.onlineContainer {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #F4D58D;
+}
+
+.onlineContainer > i {
+  font-size: 1.3rem;
+  padding-right: 0.5rem;
+}
+
+.social {
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.social > a {
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+}
+
+.freeTokens {
+  color: #fff !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 1.5rem !important;
+}
+
+.badge {
+  background: rgb(79, 49, 133);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 900;
+  margin-left: 4px;
+  opacity: 0.9;
+}

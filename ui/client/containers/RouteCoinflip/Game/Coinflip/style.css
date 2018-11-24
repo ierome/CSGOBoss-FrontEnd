@@ -1,0 +1,82 @@
+
+.container {
+  z-index: 20;
+  width: 150px;
+  height: 150px;
+}
+
+.container {
+  margin-right: 10px;
+}
+
+.coin {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+}
+
+.small .coin, .small {
+  width: 50px;
+  height: 50px;
+}
+
+.front , .back {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px px 2px rgba(0, 0, 0, 0.9);
+}
+
+.small .front, .small .back {
+  width: 50px;
+  height: 50px;
+}
+
+.front {
+  transform: translateZ(1px);
+  border-radius: 50%;
+  background: transparent url('../../assets/coin-t-big.png') center center no-repeat;
+  background-size: 150px 150px;
+}
+
+.back {
+  transform: translateZ(-1px) rotateY(180deg);
+  border-radius: 50%;
+  background: transparent url('../../assets/coin-ct-big.png') center center no-repeat;
+  background-size: 150px 150px;
+}
+
+.small .front, .small .back {
+  background-size: 50px 50px;
+}
+
+.animation1260 {
+  -webkit-animation: rotate1260 3750ms linear forwards;
+  animation: rotate1260 3750ms linear forwards
+}
+
+.animation1080 {
+  -webkit-animation: rotate1080 3214ms linear forwards;
+  animation: rotate1080 3214ms linear forwards
+}
+
+@keyframes rotate1080 {
+    from {
+        transform: rotateY(0)
+    }
+
+    to {
+        transform: rotateY(1080deg)
+    }
+}
+
+@keyframes rotate1260 {
+    from {
+        transform: rotateY(0)
+    }
+
+    to {
+        transform: rotateY(1260deg)
+    }
+}

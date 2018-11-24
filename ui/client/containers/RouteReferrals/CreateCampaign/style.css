@@ -1,0 +1,92 @@
+
+.panel {
+  background: rgba(29, 30, 33, 0.75);
+  box-sizing: border-box;
+  padding: 15px;
+  width: 450px;
+  min-width: 450px;
+  border-radius: 5px;
+}
+
+.panelHeader {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 30px;
+  font-family: 'PT Sans';
+  letter-spacing: 0.09rem;
+}
+
+.panelHeaderSuccess {
+  composes: panelHeader;
+  color: #cddc39;
+  transform: scale(1.1);
+  opacity: 0;
+  animation: panelHeaderSuccessEnter .5s cubic-bezier(1, 0.01, 0.49, 0.92) forwards;
+}
+
+@keyframes panelHeaderSuccessEnter {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.panelHeader > div {
+  font-size: 0.7rem;
+  color: #67686d;
+  letter-spacing: 0.03rem;
+  max-width: 85%;
+  margin: 0 auto;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+}
+
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.formRow label {
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.formRow input {
+  background: #17171b;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  color: #7a7a7d;
+  font-weight: 900;
+  font-size: 1rem;
+  font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+  text-transform: uppercase;
+}
+
+.formHelp {
+  display: flex;
+  margin: 6px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: #67686d;
+}
+
+.playerName {
+  color: #cddc39;
+}
+
+.redirect {
+  font-weight: bold;
+  text-align: center;
+  color: #8e8e8e;
+}

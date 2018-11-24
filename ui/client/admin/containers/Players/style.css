@@ -1,0 +1,30 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 35px 10%;
+  padding-bottom: 0;
+}
+
+.panel {
+  width: 100%;
+  min-width: 100%;
+  flex: 1;
+  background: #fff;
+  margin-top: 15px;
+  border-radius: 7px;
+  box-shadow: 4px 1px 0px rgba(0, 0, 0, 0.21);
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: scroll;
+  color: #2c2e34;
+}
+
+.panel th {
+  color: #2c2e34;
+}

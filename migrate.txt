@@ -1,0 +1,7 @@
+
+Rename Profiles to Players
+Profiles.id -> steamId
+Profiles.personaname -> displayName
+profiles.tokens -> balance
+profiles.tokensPlayed -> totalTokensPlayed
+Codes -> Campaigns

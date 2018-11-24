@@ -1,0 +1,12 @@
+
+.container {
+  composes: container from 'containers/App/SecondaryMenu/style.css';
+}
+
+.name {
+  composes: name from 'containers/App/SecondaryMenu/style.css';
+}
+
+.rightSide {
+  composes: rightSide from 'containers/App/SecondaryMenu/style.css';
+}

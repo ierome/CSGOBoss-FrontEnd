@@ -1,0 +1,61 @@
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.bar {
+  border-right: 3px solid rgba(0, 0, 0, 0.25);
+  min-height: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-top: 6px;
+  opacity: 0.6;
+  max-width: 0;
+  overflow: hidden;
+  animation: barEnter 1.4s ease forwards;
+}
+
+.bar:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+@keyframes barEnter {
+  100% {
+    max-width: 50px;
+  }
+}
+
+.barx50 {
+  composes: bar;
+  background: #fcd66f;
+  width: 50px;
+}
+
+.barx5 {
+  composes: bar;
+  background: #673ab7;
+  width: 40px;
+}
+
+.barx3 {
+  composes: bar;
+  background: #f44336;
+  width: 30px;
+}
+
+.barx2 {
+  composes: bar;
+  background: #d0d0d0;
+  width: 20px;
+}

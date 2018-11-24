@@ -1,0 +1,35 @@
+
+.normal {
+  position: relative;
+  display: block;
+  background: #f3d48c;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  color: rgb(39, 42, 45);
+  border-radius: 3px;
+  margin: 0px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.normal:focus {
+  outline: none;
+}
+
+.help {
+  display: block;
+  margin: 10px auto;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #636363;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tradeNotice {
+  font-weight: bold;
+  color: #efc75e;
+  margin-bottom: 10px;
+  text-align: center;
+}

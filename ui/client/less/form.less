@@ -1,0 +1,23 @@
+
+@form-background: rgba(34, 36, 41, 0.65);
+@form-color:#666;
+
+@form-focus-background: @form-background;
+@form-focus-color: @form-color;
+
+@form-disabled-background: @form-background;
+@form-disabled-color: @form-color;
+
+.hook-form() {
+  font-family: @global-font-family;
+  border-radius: 6px;
+  padding: 0 20px;
+
+  &:active, &:focus {
+    background: rgba(34, 36, 41, 0.65);
+  }
+}
+
+.hook-form-disabled {
+  opacity: 0.8;
+}

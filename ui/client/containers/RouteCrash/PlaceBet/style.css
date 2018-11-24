@@ -1,0 +1,41 @@
+
+.container {
+  padding: 20px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+  background: #2a2d34;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.55);
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    box-shadow: none;
+    margin-left: 0;
+    border-radius: 0;
+    background: none;
+  }
+}
+
+.container input {
+  display: block;
+  background: rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'GothamRounded';
+  padding: 10px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.container label {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: block;
+  color: #fff;
+}

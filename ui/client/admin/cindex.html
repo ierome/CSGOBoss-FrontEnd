@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="CSGOBoss is the best CS:GO gambling platform to bet your Skins. We offer a raffle ticket system, crash, jackpot and more!">
+    <meta name="keywords" content="Gambling, Skins, Counterstrike, Global Offensive, free, profit, crash, bust, Casino">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <title>Advanced CS:GO Betting Platform | CS:GO BOSS</title>
+    <base href="/" />
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <script type="text/javascript" src="http://dougtesting.net/elements/javascript/TweenMax.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+    <style type="text/css">
+    #loader {
+      background-color: #2c2e34;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1005;
+      -webkit-transition: opacity 1.5s ease;
+      -moz-transition: opacity 1.5s ease;
+      transition: opacity 1.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #loader.finished {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #loader a {
+      color: #c58c74 !important;
+    }
+
+    #loaderContainer {
+      text-align: center;
+    }
+
+    #loaderContainer h2 {
+      color: #fff !important;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    #loaderContainer img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      width: 180px;
+      filter: drop-shadow(-4px 0px 2px rgba(0, 0, 0, 0.2));
+      opacity: 0;
+      transform: scale(0.2);
+      -webkit-animation: enter 1.2s cubic-bezier(0, 1.07, 1, 1) forwards;
+      -moz-animation: enter 1.2s cubic-bezier(0, 1.07, 1, 1) forwards;
+      animation: enter 1.2s cubic-bezier(0, 1.07, 1, 1) forwards;
+    }
+
+    #loaderContainerSpinner {
+      display: block;
+      margin: 0 auto;
+      color: #fff;
+      width: 64px;
+      height: 64px;
+    }
+
+    @keyframes enter {
+      20% {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+
+      40% {
+        opacity: 0.4;
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div id="loader">
+      <div id="loaderContainer">
+        <img src="logo.png" />
+        <div id="loaderContainerSpinner" uk-spinner></div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script src="/vendor.bundle.js"></script>
+    <script src="/adminBoss.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+
+@purple: #673ab7;
+
+@import "~uikit/src/less/uikit.less";
+
+@import "./font/gotham.less";
+@import "button.less";
+@import "navbar.less";
+@import "modal.less";
+@import "form.less";
+@import "notifications.less";
+@import "text.less";
+@import "utility.less";
+
+@global-background: #353535;
+@global-color: #fff;
+@global-emphasis-color: @global-color;
+@global-font-family: Gotham Rounded SSm A, Gotham Rounded SSm B;
+
+html {
+  background: @global-background url('../assets/image/background1.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: 'GothamRounded';
+}
+
+input:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #5e6063;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6337b1;
+  background: rgba(0, 0, 0, 0.4);
+}

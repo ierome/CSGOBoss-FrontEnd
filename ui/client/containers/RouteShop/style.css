@@ -1,0 +1,224 @@
+
+.container {
+  background: rgba(31, 32, 37, 0.9);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.searchInput input {
+  /*background: rgba(255, 255, 255, 0.3);*/
+  -webkit-font-smoothing: antialiased;
+  color: #000 !important;
+}
+
+.searchInput input:focus, .searchInput input:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgb(117, 117, 117);
+}
+
+.help {
+  margin-top: 5px;
+  color: rgb(119, 119, 119);
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+.item {
+  margin-top: 25px;
+}
+
+.item img {
+  cursor: pointer;
+  width: 128px;
+  display: block;
+  margin: 0 auto;
+  transform: scale(0) translate3d(-2px, 0, 0);
+  animation: itemEnter .2s ease forwards;
+}
+
+@keyframes itemEnter {
+  from {
+    transform: scale(0) translate3d(-2px, 0, 0);
+  }
+
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+.card {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 256px;
+  height: 256px;
+  border-radius: 10px;
+  background: #8c846c;
+  box-shadow: inset 0px 0px 5px rgb(0, 0, 0), 0px 0px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all .1s cubic-bezier(0, 0.95, 0.75, 0.93);
+  user-select: none;
+}
+
+.active {
+  background: #41b655;
+  transform: translateY(-5px);
+}
+
+.card:after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 130px;
+  height: 256px;
+  background: rgba(31, 31, 31, 0.07);
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  display: block;
+  width: 70%;
+  margin: 0px auto;
+  padding: 9px;
+  border-radius: 0px 0px 20px 20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+  background: rgb(45, 45, 45);
+  border-radius: 12px;
+  border: 5px solid rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  box-shadow: 0px 0px 4px #000;
+  margin-bottom: 45px;
+}
+
+.header {
+  -webkit-font-smoothing: antialiased;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.55);
+  margin: 0;
+  height: 70px;
+}
+
+.header img {
+  height: 80px;
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.45);
+}
+
+.searchField {
+  display: block;
+  border: 0;
+  background: rgba(0, 0, 0, 0.32);
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 7px;
+  width: 80%;
+  font-weight: 100;
+  color: white;
+}
+
+.searchField, .searchField:active, .searchField:focus {
+  outline: none;
+}
+
+.deposit {
+  composes: btn from 'bootstrap/dist/css/bootstrap.min.css';
+  display: block;
+  width: 100%;
+  height: 70px;
+  background: #41b655;
+  border: 2px solid #1f1f1f;
+  border: none;
+  border-radius: 16px;
+  border-bottom: 2px solid #286f34;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.22);
+  transition: all .2s linear;
+}
+
+.deposit span {
+  display: block;
+  margin: 0px auto;
+  width: 151px;
+  border-radius: 40px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0, 0, 0, 0.28);
+}
+
+.deposit:hover {
+  background: #419850;
+}
+
+.deposit:active, .deposit:hover, .deposit:focus {
+  outline: none;
+}
+
+.itemName {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  height: 40px;
+  overflow: hidden;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.24);
+  font-size: 16px;
+}
+
+.itemTokens {
+  composes: btn from 'bootstrap/dist/css/bootstrap.min.css';
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  background: #ffffff;
+  color: #404040;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all .1s ease;
+}
+
+.wear {
+  composes: label label-default from 'bootstrap/dist/css/bootstrap.min.css';
+  background-color: #efc75e;
+  color: #272727;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.itemTokens:focus, .itemTokens:active {
+  color: #404040;
+  outline: none !important;
+}
+
+.itemTokens.active {
+  color: #fff !important;
+  background: #4CAF50;
+}
+
+.cancel, .cancel:focus, .cancel:active {
+  font-weight: bold;
+  color: #cb9d44;
+  text-decoration: none;
+}
+
+.cancel:hover {
+  color: #cb9d44;
+}

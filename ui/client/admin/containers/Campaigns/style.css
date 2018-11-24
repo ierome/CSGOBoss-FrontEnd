@@ -1,0 +1,39 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 35px 10%;
+  padding-bottom: 0;
+}
+
+.panel {
+  width: 100%;
+  min-width: 100%;
+  flex: 1;
+  background: #fff;
+  margin-top: 15px;
+  border-radius: 7px 7px 0 0;
+  box-shadow: 4px 1px 0px rgba(0, 0, 0, 0.21);
+  box-sizing: border-box;
+  padding: 10px;
+  color: #292c32;
+  overflow: scroll;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.panel table th {
+  color: #1d1e21;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}

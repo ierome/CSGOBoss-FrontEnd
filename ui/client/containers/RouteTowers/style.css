@@ -1,0 +1,601 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: absolute 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.tower {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: linear-gradient(to right, #442b6f, #5a369a);
+  box-shadow: -3px 4px 7px rgba(0, 0, 0, 0.11);
+  border-radius: 25px;
+  min-width: 380px;
+  width: 380px;
+  min-height: 600px;
+  height: 650px;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+}
+
+.innerContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.steps {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  min-height: 400px;
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  flex: 1;
+  margin: 5px 0;
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.stepActive {
+  opacity: 1;
+}
+
+.stepMove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: #673ab7;
+  background-image: url('./assets/diamonds.png');
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.stepMoveDisabled {
+  opacity: 0.2;
+}
+
+/*.stepMoveError {
+  background-color: #000;
+}
+
+.stepMoveError > span {
+  background-color: rgba(0, 0, 0, 0.35) !important;
+}*/
+
+.stepMove:focus {
+  outline: none;
+}
+
+.stepMove:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 15px #8c6ec1;
+}
+
+.stepMove:disabled {
+  cursor: not-allowed;
+}
+
+.stepMove > span {
+  background: rgba(103, 58, 183, 0.45);
+  margin: 5px 0;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  color: rgb(255, 255, 255);
+  font-family: PT sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+}
+
+.progress {
+  position: relative;
+  width: 15px;
+  min-width: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  height: 90%;
+  min-height: 90%;
+  border-radius: 5px;
+}
+
+.progress > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: #e9c86c;
+  box-shadow: 0px 0px 15px #e9c86c;
+  z-index: 1;
+  border-radius: 5px;
+  animation: progressBar 3s ease infinite;
+}
+
+@keyframes progressBar {
+  0% {
+    box-shadow: 0px 0px 15px #e9c86c;
+  }
+
+  50% {
+    box-shadow: 0px 0px 25px #e9c86c;
+  }
+
+  100% {
+    box-shadow: 0px 0px 15px #e9c86c;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 45px;
+  min-height: 45px;
+  align-items: center;
+  width: 100%;
+}
+
+.inputContainer > input {
+  height: 30px;
+  border: 0;
+  outline: 0;
+  background: none;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: center;
+  color: rgb(215, 207, 225);
+  min-width: 130px;
+  width: 130px;
+}
+
+.inputAddon {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.inputAddon button {
+  cursor: pointer;
+  background: rgb(244, 212, 123);
+  color: #2b2b2b;
+  border: none;
+  border-radius: 5px;
+  font-weight: 900;
+  font-family: GothamRounded;
+  padding: 4px 8px;
+  letter-spacing: 1px;
+  font-size: 0.6rem;
+  margin: 0 5px;
+}
+
+.inputAddon button:focus {
+  outline: none;
+}
+
+.inputAddon button:hover {
+  background: linear-gradient(to bottom right, #e9c86c, #e0c374);
+}
+
+.playButton {
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #e9c86c, #f7d77f);
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 8px 5px;
+  padding: 10px 5px;
+  font-family: 'PT Sans';
+  color: rgb(41, 36, 19);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 0px 7px rgb(43, 43, 43);
+  transition: all 0.3s ease;
+  width: 100%;
+  min-height: 40px;
+  flex: 1;
+}
+
+.playButton:disabled {
+  opacity: 0.4;
+}
+
+.playButton:focus {
+  outline: none;
+}
+
+.playButton:hover {
+  background: linear-gradient(to bottom right, #e9c86c, #e0c374);
+  box-shadow: 0px 0px 5px rgb(43, 43, 43);
+}
+
+.takeButton {
+  composes: playButton;
+  background: linear-gradient(to bottom right, #f9f9f9, #98abc1);
+  box-shadow: 0px 0px 10px #93beef;
+  color: #2b2b2b;
+  font-size: 1.2rem;
+}
+
+.takeButton:hover {
+  background: linear-gradient(to bottom right, #f9f9f9, #c3d9f3);
+  box-shadow: 0px 0px 15px #93beef;
+}
+
+.demoButton {
+  composes: playButton;
+  background: linear-gradient(to bottom right, #dddddd, #d8d8d8);
+}
+
+.demoButton:hover {
+  background: linear-gradient(to bottom right, #cecece, #d8d8d8);
+}
+
+.demoButtonHidden {
+  width: 0;
+  min-width: 0;
+  overflow: hidden;
+  max-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.header img {
+  height: 70px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+
+.headerContainer > div {
+  font-size: 3.3rem;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 15px rgba(43, 43, 43, 0.2);
+  line-height: 50px;
+}
+
+.headerContainer > span {
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  font-family: 'PT Sans';
+  color: rgb(169, 150, 202);
+}
+
+.gameModes {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px auto;
+  width: 380px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.gameModesHidden {
+  opacity: 0.15 !important;
+}
+
+.gameModesDisabled {
+  opacity: 0.4;
+}
+
+.gameMode {
+  flex: 1;
+  margin: 0 5px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.gameModesDisabled .gameMode {
+  cursor: not-allowed;
+}
+
+.gameMode:focus {
+  outline: none;
+}
+
+.gameMode:hover, .gameModeActive {
+  opacity: 1;
+}
+
+.gameMode > div {
+  display: flex;
+  justify-content: center;
+}
+
+.gameMode > div img {
+  height: 20px;
+}
+
+/* Controls */
+
+.controls {
+  position: absolute;
+  top: 25px;
+  left: -35px;
+  width: 35px;
+  background: #313035;
+  box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.36);
+  border-radius: 10px 0 0 10px;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.controls a {
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.controls a:hover {
+  opacity: 1;
+}
+
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 195px;
+  width: 195px;
+}
+
+.historyContainerHeader {
+  margin: 20px 0;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  color: #636363;
+}
+
+.histories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.history {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 160px;
+  min-width: 160px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+
+  padding: 10px;
+  height: 135px;
+  max-height: 135px;
+  min-height: 135px;
+  opacity: 1;
+}
+
+.history:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.newHistory {
+  padding: 0;
+  height: 0;
+  max-height: 0;
+  min-height: 0;
+  opacity: 0;
+  animation: historyEnter 0.8s ease forwards;
+}
+
+.newHistory:after {
+  animation: shine .5s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    width: 0%;
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  100% {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+@keyframes historyEnter {
+  100% {
+    padding: 10px;
+    height: 135px;
+    max-height: 135px;
+    min-height: 135px;
+    opacity: 1;
+  }
+}
+
+.historyName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.historyName > div {
+  font-size: 0.8rem;
+  color: #707071;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+}
+
+.historyName img {
+  opacity: 0.5;
+  width: 20px;
+  margin-right: 3px;
+}
+
+.historyProfit {
+  text-align: center;
+  -ms-flex: 1;
+  font-weight: 900;
+  color: #4caf50;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.historyProfitBad .historyProfit {
+  color: #F44336;
+}
+
+.historyHeader {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: rgb(207, 215, 225);
+}
+
+.historyWager {
+  background: rgba(21, 22, 23, 0.3);
+  border-radius: 10px;
+  font-size: 0.6rem;
+  padding: 8px 0px;
+  text-align: center;
+  color: #969696;
+  margin-top: 15px;
+}
+
+.historyWager > div {
+  color: #656565;
+}
+
+.fair {
+  margin: 20px auto;
+  min-height: 50px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+  word-break: break-all;
+}
+
+.fairShow {
+  min-height: 75px;
+  opacity: 1;
+}
+
+.fairHash {
+  font-size: 0.9rem;
+  color: #a7a7a7;
+}
+
+.fairPrevious {
+  opacity: 0.5;
+}
+
+.fairHeader {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #656565;
+}
+
+.demoMode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06rem;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ffffff;
+  background: rgba(28, 29, 33, 0.35);
+  height: 30px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 85%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 4px;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.7s cubic-bezier(0.01, 0.82, 0.25, 1);
+  font-family: 'PT Sans', sans-serif;
+}
+
+.demoModeVisible {
+  max-height: 30px;
+  opacity: 1;
+}
